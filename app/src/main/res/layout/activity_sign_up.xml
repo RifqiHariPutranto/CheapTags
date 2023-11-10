@@ -17,6 +17,8 @@
         android:layout_marginTop="300dp"
         app:boxStrokeColor="@color/yellow"
         app:hintTextColor="@color/yellow"
+        android:textColorHint="@color/gray"
+        android:hint="Type your Email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +29,6 @@
             style="@style/LoginTextInputInnerFieldStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Type your Email"
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -40,18 +41,19 @@
         android:layout_marginTop="24dp"
         app:boxStrokeColor="@color/yellow"
         app:hintTextColor="@color/yellow"
+        android:textColorHint="@color/gray"
+        android:hint="Type Your Password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/emailLayout"
-        app:passwordToggleEnabled="true">
+        app:passwordToggleEnabled="true" >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passET"
             style="@style/LoginTextInputInnerFieldStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Type Your Password"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -64,6 +66,8 @@
         android:layout_marginTop="24dp"
         app:boxStrokeColor="@color/yellow"
         app:hintTextColor="@color/yellow"
+        android:textColorHint="@color/gray"
+        android:hint="Retype Your Password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,7 +79,6 @@
             style="@style/LoginTextInputInnerFieldStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Retype Your Password"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -94,11 +97,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirmPasswordLayout" />
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/toLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="Already Registered , Sign In !"
+        android:text="Already Registered? Sign In!"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
