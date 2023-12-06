@@ -14,16 +14,11 @@
         android:src="@drawable/aklogo"/>
 
     <TextView
+        android:id="@+id/nav_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="User1"
-        android:textColor="@color/black"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="user1@gmail.com"
+        android:text="fhfhhfhf"
+        android:layout_marginTop="10dp"
         android:textColor="@color/purple_200"
         android:textSize="14sp"
         android:layout_marginBottom="16dp"/>
