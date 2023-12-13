@@ -68,14 +68,15 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         
         val myLocation = LatLng(lat, long)
         mMap.addMarker(MarkerOptions().position(myLocation).title("CheapTags"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(myLocation))
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(myLocation, 15f))
+//        mMap.moveCamera(CameraUpdateFactory.newLatLng(myLocation))
 
         getMyLocation()
     }
 
     private fun readData() {
-        database = FirebaseDatabase.getInstance("https://cheaptagsapplication-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("location")
-        database.child("lat").get().addOnSuccessListener {
+        database = FirebaseDatabase.getInstance("https://cheaptagsapplication-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("Location")
+        database.child("Latitude").get().addOnSuccessListener {
             if (it.exists()){
                 Log.i("firebase", "Got value ${it.value}")
                 lat = "${it.value}".toDouble()
@@ -84,7 +85,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }.addOnFailureListener{
             Toast.makeText(this,"Failed", Toast.LENGTH_SHORT).show()
         }
-        database.child("long").get().addOnSuccessListener {
+        database.child("Longitude").get().addOnSuccessListener {
             if (it.exists()){
                 Log.i("firebase", "Got value ${it.value}")
                 long = "${it.value}".toDouble()
